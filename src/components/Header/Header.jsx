@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Menu, Typography } from 'antd'
-import { MenuOutlined } from '@ant-design/icons'
+import { Col, Menu, Row, Typography } from 'antd'
+import {
+  FormOutlined,
+  MenuOutlined,
+  PercentageOutlined,
+} from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 
 import ModalWindow from '../Modal/Modal'
@@ -39,7 +43,133 @@ const Header = () => {
   return (
     <>
       <header className={style.header} ref={ref}>
-        <div className={style.header__wrapper}>
+        {isMobile >= 768 ? (
+          <>
+            <Row>
+              <Col span={24}>
+                <div className={style.header__menu}>
+                  <ul className={style.menu}>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/">
+                        Главная
+                      </Link>
+                    </li>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/beton">
+                        Бетон
+                      </Link>
+                    </li>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/solutions">
+                        Раствор
+                      </Link>
+                    </li>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/calculations">
+                        Фундамент
+                      </Link>
+                    </li>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/delivery">
+                        Доставка и оплата
+                      </Link>
+                    </li>
+                    <li className={style.menu__item}>
+                      <Link className={style.link} to="/contacts">
+                        Контакты
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={24}>
+                <div className={style.info}>
+                  <a className={style.info__phoneNum} href="tel:+78003336420">
+                    8 (800) 333-64-20
+                  </a>
+                  <div>
+                    <FormOutlined className={style.icon_callback} />
+                    <button
+                      className={style.info__callback}
+                      onClick={showModal}
+                    >
+                      Оставить заявку на обратный звонок
+                    </button>
+                  </div>
+                  <div>
+                    <PercentageOutlined className={style.icon_callback} />
+                    <Link to="/calculations" className={style.info__callback}>
+                      Рассчитать стоимость
+                    </Link>
+                  </div>
+                  <a className={style.info__phoneNum} href="tel:+74993436420">
+                    8 (499) 343-64-20
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </>
+        ) : (
+          <Row>
+            <Col span={20}>
+              <div className={style.info}>
+                <a className={style.info__phoneNum} href="tel:+78003336420">
+                  8 (800) 333-64-20
+                </a>
+                <a className={style.info__phoneNum} href="tel:+74993436420">
+                  8 (499) 343-64-20
+                </a>
+              </div>
+            </Col>
+            <Col span={4}>
+              <Menu
+                mode="horizontal"
+                selectedKeys={[menuItem]}
+                onClick={handleClick}
+                className={style.mobile_menu}
+              >
+                <SubMenu
+                  key="SubMenu"
+                  icon={<MenuOutlined className={style.menu_icon} />}
+                >
+                  <Menu.Item key="setting:1">
+                    <Link className={style.link} to="/">
+                      Главная
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="setting:2">
+                    <Link className={style.link} to="/beton">
+                      Бетон
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="setting:3">
+                    <Link className={style.link} to="/solutions">
+                      Раствор
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="setting:4">
+                    <Link className={style.link} to="/calculations">
+                      Фундамент
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="setting:5">
+                    <Link className={style.link} to="/delivery">
+                      Доставка и оплата
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="setting:6">
+                    <Link className={style.link} to="/contacts">
+                      Контакты
+                    </Link>
+                  </Menu.Item>
+                </SubMenu>
+              </Menu>
+            </Col>
+          </Row>
+        )}
+        {/* <div className={style.header__wrapper}>
           <div className={style.header__logo}>
             <Link to="/">
               <Title className={style.header__title} level={1}>
@@ -140,7 +270,7 @@ const Header = () => {
               </Menu>
             )}
           </div>
-        </div>
+        </div> */}
       </header>
       <ModalWindow
         isModalVisible={isModalVisible}

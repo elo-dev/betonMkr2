@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Col, Divider, Input, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -47,6 +47,10 @@ const Сalculations = () => {
     e.preventDefault()
     calculate()
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Layout className={style.calculations}>

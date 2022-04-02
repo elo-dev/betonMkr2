@@ -1,20 +1,20 @@
-.price{
+.price {
   margin: 5rem 0;
   background-color: white !important;
 }
 
-.card{
+.card {
   box-shadow: 0px 5px 13px 2px rgba(34, 60, 80, 0.2);
-  &__table{
+  &__table {
     width: 100%;
   }
-  &__img{
+  &__img {
     width: 100%;
     height: 100px;
     object-fit: cover;
     object-position: center center;
   }
-  &__title{
+  &__title {
     text-align: center;
     margin: 0 !important;
     padding: 10px 0;
@@ -23,24 +23,25 @@
   }
 }
 
-thead th{
+thead th {
   color: var(--text-color);
   font-size: 1.5em;
   padding: 10px 0;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #bc986a79;
+  color: white !important;
+  background-color: var(--main-color);
 }
 
-tbody td{
+tbody td {
   font-size: 1.2em;
   padding: 5px 30px;
 }
 
 @media screen and (max-width: 976px) {
-  .price__col{
-    &:not(:last-child){
+  .price__col {
+    &:not(:last-child) {
       margin-bottom: 2rem;
     }
   }
