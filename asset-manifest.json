@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/betonMkr2/static/css/main.05cc8413.css",
-    "main.js": "/betonMkr2/static/js/main.a9a7c27a.js",
+    "main.js": "/betonMkr2/static/js/main.b7d555ef.js",
     "static/media/betononasos.png": "/betonMkr2/static/media/betononasos.d3cae657b29b2aff44df.png",
     "static/media/work5.jpeg": "/betonMkr2/static/media/work5.c9afa1691428d44599be.jpeg",
     "static/media/rastvor2.jpeg": "/betonMkr2/static/media/rastvor2.baa48c3e75aad716dc21.jpeg",
@@ -41,10 +41,10 @@
     "static/media/beton-min.jpeg": "/betonMkr2/static/media/beton-min.f9da8e4bfba9a12297fa.jpeg",
     "index.html": "/betonMkr2/index.html",
     "main.05cc8413.css.map": "/betonMkr2/static/css/main.05cc8413.css.map",
-    "main.a9a7c27a.js.map": "/betonMkr2/static/js/main.a9a7c27a.js.map"
+    "main.b7d555ef.js.map": "/betonMkr2/static/js/main.b7d555ef.js.map"
   },
   "entrypoints": [
     "static/css/main.05cc8413.css",
-    "static/js/main.a9a7c27a.js"
+    "static/js/main.b7d555ef.js"
   ]
 }
