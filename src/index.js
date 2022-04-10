@@ -10,7 +10,7 @@ import { YMaps } from 'react-yandex-maps'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={'/betonMkr2/'}>
       <YMaps>
         <App />
       </YMaps>
